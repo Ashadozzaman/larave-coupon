@@ -1,0 +1,19 @@
+{
+    "name": "ashadozzaman/coupon",
+    "description": "This package generate coupon/discount for any kinds of course or product...",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ashadozzaman\\Coupon\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ashadozzaman",
+            "email": "shovoua@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
