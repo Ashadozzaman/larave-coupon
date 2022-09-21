@@ -55,4 +55,23 @@ After the migration has been published you can create the vouchers table by runn
 ```bash
 php artisan migrate
 ```
+## Usage
+The basic concept of this package is that you can create coupon by admin for specific course/product and course/product category. For access this feature you declure your admin authentication middleware in <b>config/coupon.php</b> file like bellow:-
+
+```bash
+return [
+     --------
+     --------
+    'IsAdmin' => 'is_admin', //you should replace your middleware to is_admin thanks
+]
+```
+After complete middleware register. Now you able to access create coupon in you admin section. Now you just call two route for creating coupon. Two route show bellow:-
+
+```bash
+Route name: route(coupon.index), Route Url: /coupon <br>
+Route name: route(coupon_category.index), Route Url: /coupon_category
+//use example
+<a href="{{route('coupon.index')}}">Coupon</a><br>
+<a href="{{route('coupon_category.index')}}">Coupon Category</a>
+```
 
