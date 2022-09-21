@@ -229,4 +229,6 @@ $data = [
 ];
 ```
 
+# Support
+For any query please send email to shovoua@gmail.com
 
