@@ -65,6 +65,20 @@ return [
     'IsAdmin' => 'is_admin', //you should replace your middleware to is_admin thanks
 ]
 ```
+## Model Declare
+You must be declare your coupon related items models like products/coures and categories table model example show bellow:-
+```bash
+<?php
+return [
+    //this table/model use for single coupon generate, like Product/products, Course/courses
+    'coupon_for_single_table' => App\Models\Course::class,
+
+
+    //this table/model use for specific category coupon generate, like Product/products, Course/courses
+    'coupon_for_category_table' => App\Models\Category::class,
+    
+]
+```
 After complete middleware register. Now you able to access create coupon in you admin section. Now you just call two route for creating coupon. Two route show bellow:-
 
 ```bash
@@ -74,4 +88,7 @@ Route name: route(coupon_category.index), Route Url: /coupon_category
 <a href="{{route('coupon.index')}}">Coupon</a><br>
 <a href="{{route('coupon_category.index')}}">Coupon Category</a>
 ```
+## Admin coupon create process done here
+
+## Use Coupon In Frontend
 
