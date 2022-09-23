@@ -55,13 +55,13 @@ trait CouponGenerate
         return $this->suffix !== null ? $this->separator . $this->suffix : '';
     }
 
-    public function checkCoupunStatus($coupon, $item, $item_category, $customer_id)
+    public function checkCoupunStatus($coupon_code, $item, $item_category, $customer_id)
     {
-        $coupon = Coupon::where('code', $coupon)->where('status', 1)->where('course_id', $item)
+        $coupon = Coupon::where('code', $coupon_code)->where('status', 1)->where('course_id', $item)
             ->where('start_date', '<=', Carbon::now())
             ->where('expire_date', '>=', Carbon::now())
             ->first();
-        $coupon_category = CouponCategory::where('code', $coupon)->where('status', 1)->where('category_id', $item_category)
+        $coupon_category = CouponCategory::where('code', $coupon_code)->where('status', 1)->where('category_id', $item_category)
             ->where('start_date', '<=', Carbon::now())
             ->where('expire_date', '>=', Carbon::now())
             ->first();
