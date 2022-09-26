@@ -228,9 +228,12 @@ $data = [
     'message'  => 'Coupon use successfully',
 ];
 ```
+## Contributor
+Ashadozzaman Shvou(shovoua@gmail.com)
+# Support
+For any query please send email to shovoua@gmail.com
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-# Support
-For any query please send email to shovoua@gmail.com
 
